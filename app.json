@@ -100,20 +100,12 @@
       "value": "",
       "required": false
     },
-    "IRC_IN_CHANNEL": {
-      "description": "IRC channel to accept messages from",
+    "IRC_CHANNEL": {
+      "description": "IRC channel to bridge",
       "value": ""
     },
-    "MATTERMOST_IN_CHANNEL": {
-      "description": "Mattermost channel to accept messages from",
-      "value": ""
-    },
-    "IRC_OUT_CHANNEL": {
-      "description": "IRC channel to send messages to",
-      "value": ""
-    },
-    "MATTERMOST_OUT_CHANNEL": {
-      "description": "Mattermost channel to send messages to",
+    "MATTERMOST_CHANNEL": {
+      "description": "Mattermost channel to bridge",
       "value": ""
     }
   }
