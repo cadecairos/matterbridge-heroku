@@ -1,5 +1,6 @@
-[irc]
+[IRC]
 
+Enable=true
 Server="${IRC_SERVER}"
 Nick="${IRC_NICK}"
 UseTLS=${IRC_USE_TLS}
@@ -12,6 +13,7 @@ IgnoreNicks="${IRC_IGNORE_NICKS}"
 
 [mattermost]
 
+Enable=true
 Server="${MATTERMOST_SERVER}"
 Team="${MATTERMOST_TEAM}"
 Login="${MATTERMOST_BOT_LOGIN}"
