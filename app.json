@@ -49,7 +49,7 @@
     "IRC_IGNORE_NICKS": {
       "description": "space separated list of nicks to ignore when bridging irc messages to mattermost",
       "value": "",
-      "required": "false"
+      "required": false
     },
     "MATTERMOST_SERVER": {
       "description": "The URL of the mattermost server",
@@ -81,7 +81,7 @@
     },
     "MATTERMOST_PREFIX_MSG_WITH_NICK": {
       "description": "Prefix the messages with the remote users nick",
-      "value": ""
+      "value": "false"
     },
     "MATTERMOST_REMOTE_NICK_FORMAT": {
       "description": "Format string for messages",
@@ -97,7 +97,8 @@
     },
     "MATTERMOST_IGNORE_NICKS": {
       "description": "Space separated list of nicks whose messages should not be bridged",
-      "value": ""
+      "value": "",
+      "required": false
     },
     "IRC_IN_CHANNEL": {
       "description": "IRC channel to accept messages from",
