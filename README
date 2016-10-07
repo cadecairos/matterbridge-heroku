@@ -1,6 +1,6 @@
 # Matterbridge-heroku
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 This inline buildpack downloads and installs matterbridge, and lets you connect an irc channel to a Mattermost channel.
 
