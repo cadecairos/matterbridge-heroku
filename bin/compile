@@ -11,6 +11,5 @@ MATTERBRIDGE_URL="https://github.com/42wim/matterbridge/releases/download/$MATTE
 
 echo "-----> Downloading Matterbridge"
 cd $BUILD_DIR
-curl -L $MATTERBRIDGE_URL -o matterbridge
-
-echo "-----> Download Complete"
+curl -s -L $MATTERBRIDGE_URL -o matterbridge
+chmod +x matterbridge
