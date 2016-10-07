@@ -28,7 +28,7 @@ function _term {
 }
 
 trap _term SIGTERM
-S
+
 ####################
 # Start Matterbridge #
 ####################
