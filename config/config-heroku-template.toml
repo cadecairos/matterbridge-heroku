@@ -12,7 +12,6 @@ IgnoreNicks="${IRC_IGNORE_NICKS}"
 
 [mattermost]
 
-useAPI=true
 Server="${MATTERMOST_SERVER}"
 Team="${MATTERMOST_TEAM}"
 Login="${MATTERMOST_BOT_LOGIN}"
