@@ -16,7 +16,7 @@ export MATTERMOST_NICKS_PER_ROW=`echo ${MATTERMOST_NICKS_PER_ROW:=4} | tr -d \"`
 ########################################################################
 # Write Config variables in envrionment to the configuration JSON file #
 ########################################################################
-lib/envsubst < config/config-heroku-template.toml > config/config-heroku.json
+lib/envsubst < config/config-heroku-template.toml > config/config-heroku.toml
 
 #####################################
 # Pass SIGTERM to Matterbridge proc #
