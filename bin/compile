@@ -1,0 +1,14 @@
+#!/bin/bash
+
+set -e
+
+BUILD_DIR=$1
+CACHE_DIR=$2
+ENV_DIR=$3
+
+MATTERBRIDGE_VERSION="$(cat $ENV_DIR/MATTERBRIDGE_VERSION)"
+MATTERBRIDGE_URL="https://github.com/42wim/matterbridge/releases/download/$MATTERBRIDGE_VERSION/matterbridge-linux64"
+
+echo "-----> Downloading Matterbridge"
+cd $BUILD_DIR
+curl -s -L "${MATTERMOST_URL}" -o matterbridge

@@ -1,0 +1,119 @@
+{
+  "name": "Matterbridge-Heroku",
+  "description": "Deploy Matterbridge to Heroku",
+  "repository": "https://github.com/cadecairos/matterbridge-heroku",
+  "keywords": ["mattermost", "matterbridge", "IRC"],
+  "success_url": "/",
+  "buildpacks": [
+    {
+      "url": "http://github.com/cadecairos/matterbridge-heroku.git#master"
+    }
+  ],
+  "env": {
+    "MATTERBRIDGE_VERSION": {
+       "description": "Version of matterbridge to download and deploy",
+       "value": "0.10.2"
+    },
+    "IRC_SERVER": {
+      "description": "The IRC server (including port) to connect to",
+      "value": "irc.mozilla.org:6697"
+    },
+    "IRC_NICK": {
+      "description": "The IRC nick of the bot",
+      "value": "matterbot"
+    },
+    "IRC_USE_TLS": {
+      "description": "Connect to IRC with TLS",
+      "value": "true"
+    },
+    "IRC_USE_SASL": {
+      "description": "Authenticate using SASL",
+      "value": "true"
+    },
+    "IRC_SKIP_TLS_VERIFY": {
+      "description": "Don't verify TLS certificate from server",
+      "value": "false"
+    },
+    "IRC_NICKSERV_NICK": {
+      "description": "NickServ account name",
+      "value": "matterbot"
+    },
+    "IRC_NICKSERV_PASSWORD": {
+      "description": "NickServ account pasword",
+      "value": ""
+    },
+    "IRC_REMOTE_NICK_FORMAT": {
+      "description": "The IRC nick of the bot",
+      "value": "[{PROTOCOL}] <{NICK}> "
+    },
+    "IRC_IGNORE_NICKS": {
+      "description": "space separated list of nicks to ignore when bridging irc messages to mattermost",
+      "value": "",
+      "required": "false"
+    },
+    "MATTERMOST_SERVER": {
+      "description": "The URL of the mattermost server",
+      "value": ""
+    },
+    "MATTERMOST_TEAM": {
+      "description": "Mattermost team to connect to",
+      "value": ""
+    },
+    "MATTERMOST_BOT_LOGIN": {
+      "description": "Mattermost bot username",
+      "value": ""
+    },
+    "MATTERMOST_BOT_PASSWORD": {
+      "description": "Mattermost Bot password",
+      "value": ""
+    },
+    "MATTERMOST_NO_TLS": {
+      "description": "Use http to connect to Mattermost",
+      "value": "false"
+    },
+    "MATTERMOST_SKIP_TLS_VERIFY": {
+      "description": "Don't verify the mattermost server's certificate",
+      "value": "false"
+    },
+    "MATTERMOST_SHOW_JOIN_PART": {
+      "description": "Show join/part messages",
+      "value": "false"
+    },
+    "MATTERMOST_PREFIX_MSG_WITH_NICK": {
+      "description": "Prefix the messages with the remote users nick",
+      "value": ""
+    },
+    "MATTERMOST_REMOTE_NICK_FORMAT": {
+      "description": "Format string for messages",
+      "value": "[{PROTOCOL}] <{NICK}> "
+    },
+    "MATTERMOST_NICK_FORMATTER": {
+      "description": "How to display nicklist - 'table' or 'plain'",
+      "value": "plain"
+    },
+    "MATTERMOST_NICKS_PER_ROW": {
+      "description": "number of nicks to show per row",
+      "value": "4"
+    },
+    "MATTERMOST_IGNORE_NICKS": {
+      "description": "Space separated list of nicks whose messages should not be bridged",
+      "value": ""
+    },
+    "IRC_IN_CHANNEL": {
+      "description": "IRC channel to accept messages from",
+      "value": ""
+    },
+    "MATTERMOST_IN_CHANNEL": {
+      "description": "Mattermost channel to accept messages from",
+      "value": ""
+    },
+    "IRC_OUT_CHANNEL": {
+      "description": "IRC channel to send messages to",
+      "value": ""
+    },
+    "MATTERMOST_OUT_CHANNEL": {
+      "description": "Mattermost channel to send messages to",
+      "value": ""
+    }
+  }
+}
