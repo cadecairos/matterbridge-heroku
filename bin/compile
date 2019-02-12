@@ -2,14 +2,22 @@
 
 set -e
 
+# Source: https://github.com/heroku/heroku-buildpack-ruby/blob/master/bin/compile
+BIN_DIR=$(cd $(dirname $0); pwd)
+source "$BIN_DIR/support/bash_functions.sh"
+
 BUILD_DIR=$1
 CACHE_DIR=$2
 ENV_DIR=$3
 
-MATTERBRIDGE_VERSION="$(cat $ENV_DIR/MATTERBRIDGE_VERSION)"
-MATTERBRIDGE_URL="https://github.com/42wim/matterbridge/releases/download/$MATTERBRIDGE_VERSION/matterbridge-linux64"
+# Export all envvars (with default blacklist)
+export_env_dir "$ENV_DIR"
 
-echo "-----> Downloading Matterbridge"
+LATEST_VERSION=$(get_latest_release "42wim/matterbridge")
+MATTERBRIDGE_VERSION="${MATTERBRIDGE_VERSION:-$LATEST_VERSION}"
+MATTERBRIDGE_URL="${MATTERBRIDGE_URL:-https://github.com/42wim/matterbridge/releases/download/$MATTERBRIDGE_VERSION/matterbridge-linux-amd64}"
+
+echo "-----> Downloading Matterbridge: $MATTERBRIDGE_URL"
 cd $BUILD_DIR
 curl -s -L $MATTERBRIDGE_URL -o matterbridge
 chmod +x matterbridge
