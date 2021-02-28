@@ -37,7 +37,7 @@ template file.
   custom url instead of the tagged release from the official GitHub
 repo.  (Setting this makes `MATTERBRIDGE_VERSION` ignored.)
     * With caution, you may want to use the [latest nightly matterbridge
-      build](https://bintray.com/42wim/nightly/Matterbridge/_latestVersion)
+      build](https://bintray.com/42wim/nightly/Matterbridge/_latestVersion#files)
       while waiting on the next official release.
 
 ### Environment: Matterbridge
